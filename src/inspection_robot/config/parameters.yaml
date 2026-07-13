@@ -1,0 +1,17 @@
+inspection_node:
+  ros__parameters:
+    robot_name: "AI_Industrial_Safety_Inspection_Robot"
+    inspection_frequency: 1.0
+    system_status: "READY"
+
+    # Future camera configuration
+    camera_enabled: false
+    camera_topic: "/camera/image_raw"
+
+    # Future AI model configuration
+    ai_detection_enabled: false
+    model_path: "models/safety_detection.onnx"
+
+    # Logging configuration
+    database_logging_enabled: true
+    database_path: "database/inspection.db"
