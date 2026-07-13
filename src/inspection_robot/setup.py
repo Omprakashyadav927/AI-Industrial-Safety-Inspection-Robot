@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 import os
 from glob import glob
 
@@ -7,7 +7,9 @@ package_name = 'inspection_robot'
 setup(
     name=package_name,
     version='0.0.1',
-    packages=[package_name],
+
+    packages=find_packages(),
+
     data_files=[
         (
             'share/ament_index/resource_index/packages',
@@ -26,16 +28,24 @@ setup(
             glob('config/*.yaml')
         ),
     ],
+
     install_requires=['setuptools'],
+
     zip_safe=True,
+
     maintainer='Omprakash Yadav',
     maintainer_email='omprakashyadav5592@gmail.com',
+
     description='AI-Powered Industrial Safety Inspection Robot (Demo Version)',
+
     license='MIT',
+
     tests_require=['pytest'],
+
     entry_points={
         'console_scripts': [
             'inspection_node = inspection_robot.inspection_node:main',
+            'camera_node = inspection_robot.camera.camera_node:main',
         ],
     },
 )
