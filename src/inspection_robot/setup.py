@@ -46,6 +46,7 @@ setup(
         'console_scripts': [
             'inspection_node = inspection_robot.inspection_node:main',
             'camera_node = inspection_robot.camera.camera_node:main',
+            'image_processing_node = inspection_robot.image_processing_node:main',
         ],
     },
 )
