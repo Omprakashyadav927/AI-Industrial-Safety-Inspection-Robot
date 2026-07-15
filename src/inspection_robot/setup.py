@@ -43,9 +43,11 @@ setup(
     tests_require=['pytest'],
 
     entry_points={
-        'console_scripts': [
-            'inspection_node = inspection_robot.inspection_node:main',
-            'camera_node = inspection_robot.camera.camera_node:main',
-        ],
+    'console_scripts': [
+        'inspection_node = inspection_robot.inspection_node:main',
+    	'camera_node = inspection_robot.camera.camera_node:main',
+    	'video_source_node = inspection_robot.video.video_source_node:main',
+    	'image_processing_node = inspection_robot.processing.image_processing_node:main',
+    ],
     },
 )
